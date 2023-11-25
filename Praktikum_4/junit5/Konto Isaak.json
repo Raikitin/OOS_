@@ -1,0 +1,16 @@
+[
+  {
+    "incomingInterest": 0.8,
+    "outgoingInterest": 0.5,
+    "date": "23.11.2023",
+    "amount": -2500.0,
+    "description": "Payment 2"
+  },
+  {
+    "sender": "Isaak",
+    "recipient": "Adam",
+    "date": "08.06.2023",
+    "amount": 1500.0,
+    "description": "OutgoingTransfer to Adam"
+  }
+]

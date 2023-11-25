@@ -1,0 +1,9 @@
+[
+  {
+    "sender": "Eva",
+    "recipient": "Kain",
+    "date": "08.06.2023",
+    "amount": 1500.0,
+    "description": "OutgoingTransfer to Adam"
+  }
+]
