@@ -321,18 +321,21 @@ public class PrivateBank implements Bank{
         String fileName = "Konto " + account + ".json";
         Path filePath = Paths.get(directoryName, fileName);
 
+
         Path directoryPath = filePath.getParent();
         Files.createDirectories(directoryPath);
 
         try(Writer writer = Files.newBufferedWriter(filePath)) {
 
-            Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Transaction.class, new TransactionSerializer()).setPrettyPrinting().create();
+            Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(OutgoingTransfer.class, new TransactionSerializer()).registerTypeAdapter(Payment.class, new TransactionSerializer()).registerTypeAdapter(IncomingTransfer.class, new TransactionSerializer()).setPrettyPrinting().create();
 
             List<Transaction> transactions = accountsToTransactions.get(account);
 
             if(transactions != null) {
                 gson.toJson(transactions, writer);
             }
+        } catch(IOException exp){
+            throw new IOException();
         }
     }
 }

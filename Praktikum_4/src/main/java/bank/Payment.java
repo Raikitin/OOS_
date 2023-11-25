@@ -9,6 +9,11 @@ public class Payment extends Transaction {
     private double incomingInterest;
     private double outgoingInterest;
 
+    public Payment(){
+        super();
+        this.setIncomingInterest(0.0);
+        this.setOutgoingInterest(0.0);
+    }
     /**
      * <p>creates a payment object</p>
      *

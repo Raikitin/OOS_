@@ -9,6 +9,12 @@ public abstract class Transaction implements CalculateBill {
     protected double amount;
     protected String description;
 
+    public Transaction(){
+        this.setDate("01.01.2023");
+        this.setAmount(1000);
+        this.setDescription("test");
+    }
+
     /**
      * <p>creates a Transaction object</p>
      *

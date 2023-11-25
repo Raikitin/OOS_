@@ -1,9 +1,12 @@
 [
   {
-    "sender": "Eva",
-    "recipient": "Abel",
-    "date": "08.06.2023",
-    "amount": 1500.0,
-    "description": "OutgoingTransfer to Adam"
+    "CLASSNAME": "IncomingTransfer",
+    "INSTANCE": {
+      "sender": "Eva",
+      "recipient": "Abel",
+      "date": "08.06.2023",
+      "amount": 1500.0,
+      "description": "OutgoingTransfer to Adam"
+    }
   }
 ]

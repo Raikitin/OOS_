@@ -8,7 +8,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TransactionSerializerTest {
-    static String dir = "./test_data";
+    static String dir = "F:\\Dokumente\\GitHub\\OOS_\\Praktikum_4\\test_data";
 
     @org.junit.jupiter.api.AfterAll
     public static void cleanup() {

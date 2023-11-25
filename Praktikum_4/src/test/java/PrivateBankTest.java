@@ -2,7 +2,6 @@ import bank.*;
 import bank.exceptions.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.File;
@@ -19,7 +18,7 @@ public class PrivateBankTest {
 
     static PrivateBank privateBank;
     static PrivateBank copyPrivateBank;
-    static String dir = "data/junit5";
+    static String dir = "F:\\Dokumente\\GitHub\\OOS_\\Praktikum_4\\test_data";
 
     @DisplayName("Set up a PrivateBank")
     @BeforeAll

@@ -37,6 +37,7 @@ public class TransactionSerializer implements JsonSerializer<Transaction>, JsonD
      */
     @Override
     public JsonElement serialize(Transaction src, Type typeOfSrc, JsonSerializationContext context) {
+        System.out.println("Wird der Serialize ausgeführt?");
         JsonObject result = new JsonObject();
         JsonObject instance = new JsonObject();
         String classname = src.getClass().toString();
@@ -75,30 +76,33 @@ public class TransactionSerializer implements JsonSerializer<Transaction>, JsonD
     public Transaction deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         JsonObject jsonObject = jsonElement.getAsJsonObject();
         String classname = jsonObject.get("CLASSNAME").getAsString();
+
+        JsonObject instanceElement = jsonObject.get("INSTANCE").getAsJsonObject();
+
         if(classname.equals("Payment"))
         {
             return new Payment(
-                    jsonObject.get("date").getAsString(),
-                    jsonObject.get("amount").getAsDouble(),
-                    jsonObject.get("description").getAsString(),
-                    jsonObject.get("incomingInterest").getAsDouble(),
-                    jsonObject.get("outgoingInterest").getAsDouble());
+                    instanceElement.get("date").getAsString(),
+                    instanceElement.get("amount").getAsDouble(),
+                    instanceElement.get("description").getAsString(),
+                    instanceElement.get("incomingInterest").getAsDouble(),
+                    instanceElement.get("outgoingInterest").getAsDouble());
 
         } else if (classname.equals("IncomingTransfer")) {
             return new IncomingTransfer(
-                    jsonObject.get("date").getAsString(),
-                    jsonObject.get("amount").getAsDouble(),
-                    jsonObject.get("description").getAsString(),
-                    jsonObject.get("sender").getAsString(),
-                    jsonObject.get("recipient").getAsString());
+                    instanceElement.get("date").getAsString(),
+                    instanceElement.get("amount").getAsDouble(),
+                    instanceElement.get("description").getAsString(),
+                    instanceElement.get("sender").getAsString(),
+                    instanceElement.get("recipient").getAsString());
 
         } else if (classname.equals("OutgoingTransfer")){
             return new OutgoingTransfer(
-                    jsonObject.get("date").getAsString(),
-                    jsonObject.get("amount").getAsDouble(),
-                    jsonObject.get("description").getAsString(),
-                    jsonObject.get("sender").getAsString(),
-                    jsonObject.get("recipient").getAsString());
+                    instanceElement.get("date").getAsString(),
+                    instanceElement.get("amount").getAsDouble(),
+                    instanceElement.get("description").getAsString(),
+                    instanceElement.get("sender").getAsString(),
+                    instanceElement.get("recipient").getAsString());
 
         } else{
             throw new JsonParseException("Unsupported class: " + classname);
