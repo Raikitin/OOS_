@@ -1,0 +1,22 @@
+[
+  {
+    "CLASSNAME": "IncomingTransfer",
+    "INSTANCE": {
+      "sender": "you",
+      "recipient": "Moritz",
+      "date": "02.02.2002",
+      "amount": 1000.0,
+      "description": "test"
+    }
+  },
+  {
+    "CLASSNAME": "OutgoingTransfer",
+    "INSTANCE": {
+      "sender": "Moritz",
+      "recipient": "you",
+      "date": "02.02.2002",
+      "amount": 500.0,
+      "description": "test2"
+    }
+  }
+]

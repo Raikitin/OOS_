@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+
+
+
+<AnchorPane fx:id = "root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.oos.MainController" prefHeight="400.0" prefWidth="600.0">
+
+    <ListView fx:id="accountsListView" layoutX="100.0" layoutY="125.0" prefHeight="250.0" prefWidth="800.0" />
+    <Text layoutX="71.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="350" text="Liste aller Accounts" textAlignment="CENTER" wrappingWidth="858.0">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Text>
+
+    <StackPane layoutX="271.0" layoutY="409.0" prefHeight="50.0" prefWidth="458.0">
+        <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+    </StackPane>
+
+    <Button fx:id="addButton" layoutX="828.0" layoutY="434.0" mnemonicParsing="false" text="Account Hinzufügen" textAlignment="CENTER">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Button>
+
+</AnchorPane>

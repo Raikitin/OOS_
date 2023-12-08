@@ -1,0 +1,12 @@
+[
+  {
+    "CLASSNAME": "IncomingTransfer",
+    "INSTANCE": {
+      "sender": "Donor",
+      "recipient": "Account",
+      "date": "26.11.2023",
+      "amount": 1000.0,
+      "description": "test"
+    }
+  }
+]

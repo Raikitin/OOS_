@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id = "root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.oos.AccountController" prefHeight="400.0" prefWidth="600.0">
+
+    <ListView fx:id="transactionsListView" layoutX="100.0" layoutY="100.0" prefHeight="250.0" prefWidth="800.0" />
+
+    <StackPane layoutX="304.0" layoutY="32.0" prefHeight="41.0" prefWidth="392.0">
+        <Text fx:id="accountName" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+    </StackPane>
+
+    <Button fx:id="backButton" contentDisplay="CENTER" layoutX="30.0" layoutY="398.0" mnemonicParsing="false" text="Zurück" textAlignment="CENTER">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Button>
+
+    <MenuButton fx:id="optionsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="803.0" layoutY="52.0" mnemonicParsing="false" text="Optionen">
+        <items>
+            <MenuItem fx:id="allTransaction" mnemonicParsing="false" text="Standard" />
+            <MenuItem fx:id="ascending" mnemonicParsing="false" text="Aufsteigend sortiert" />
+            <MenuItem fx:id="descending" mnemonicParsing="false" text="Absteigend sortiert" />
+            <MenuItem fx:id="positive" mnemonicParsing="false" text="Positive Transaktionen" />
+            <MenuItem fx:id="negative" mnemonicParsing="false" text="Negative Transaktionen" />
+        </items>
+        <font>
+            <Font size="14.0" />
+        </font>
+    </MenuButton>
+
+    <StackPane layoutX="103.0" layoutY="366.0" prefHeight="73.0" prefWidth="731.0">
+        <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="734.0" />
+    </StackPane>
+
+    <MenuButton fx:id="addButton" layoutX="860.0" layoutY="398.0" mnemonicParsing="false" text="Hinzufügen" textAlignment="CENTER">
+        <items>
+            <MenuItem fx:id="payment" mnemonicParsing="false" text="Neues Payment" />
+            <MenuItem fx:id="transfer" mnemonicParsing="false" text="Neue Transaktion" />
+        </items>
+        <font>
+            <Font size="14.0" />
+        </font>
+    </MenuButton>
+
+</AnchorPane>
